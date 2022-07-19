@@ -10,7 +10,7 @@ read -ra args
 
 if [ -z "$args" ]
 then
-  FOUNDRY_PROFILE=deploy forge create -i --rpc-url ${rpc} ./src/1InchListingPayload.sol:OneInchListingPayload --verify
+  FOUNDRY_PROFILE=deploy forge create -i --rpc-url ${RPC_URL} ./src/1InchListingPayload.sol:OneInchListingPayload --verify
 else
-  FOUNDRY_PROFILE=deploy forge create -i --rpc-url ${rpc} --constructor-args ${args} ./src/1InchListingPayload.sol:OneInchListingPayload --verify
+  FOUNDRY_PROFILE=deploy forge create -i --rpc-url ${RPC_URL} --constructor-args ${args} ./src/1InchListingPayload.sol:OneInchListingPayload --verify
 fi
